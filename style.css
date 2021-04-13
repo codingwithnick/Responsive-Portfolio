@@ -279,8 +279,8 @@ header .navbar ul li a.active::before{
     justify-content: space-between;
 }
 .about-me .about-content .text .info .list{
-    flex: 0 0 calc(50% - 50px);
-    max-width:calc(50% - 50px) ;
+    flex: 0 0 calc(50% - 15px);
+    max-width:calc(50% - 15px) ;
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -788,3 +788,152 @@ footer .social a:hover{
     font-weight: 400;
     font-size: 15px;
 }
+
+/* Ham-bURGER */
+
+.ham-burger .fa{
+    font-size: 20px;
+    height: 30px;
+    width: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    display: none;
+}
+
+
+/* responsive */
+
+
+@media(max-width:991px){
+    .Home .Home-content .block h1{
+          font-size: 50px;
+      }
+     }
+    
+    
+    
+     @media(max-width:767px){
+        .Home .Home-content .block h1{
+            font-size: 40px;
+    }
+    .Home .Home-content .block h3{
+        font-size: 25px;
+    }
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: #ffffff;
+        border: none;
+        border-bottom: 1px solid #eeeeee;
+        }
+    
+    header .brand-name a{
+        color: #000000;
+    }
+    
+    .ham-burger .fa{
+            display: inline-block;
+        }
+    .navbar{
+        position: absolute;
+        background-color:#ffffff;
+        width: 100%;
+        left: 0px;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eeeeee;
+        display: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .navbar.show{
+        display: block;
+    }
+    
+       header .navbar ul li{
+           display: block;
+           margin-left:0 ;
+       }
+       header .navbar ul li a{
+           line-height: 42px;
+           color: #000000;
+       }
+       header .navbar ul li a::before{
+           background-color: #febd01;
+       }
+      .about-me .about-content .text{
+          flex:0 0 100% ;
+          max-width: 100%;
+          padding-left:0px ;
+          padding-top: 30px;
+      }
+      .about-me .about-content .img{
+        flex:0 0 100% ;
+        max-width: 100%;
+      }
+      .services .services-content .box{
+        background-color: #ffffff;
+        padding: 30px;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .skills .skills-content{
+          flex:0 0 100% ;
+          max-width:100% ;
+          padding-right:0px ;
+      }
+      .skills .img{
+          flex: 0 0 100%;
+          max-width: 100%;
+      }
+      .portfolio .portfolio-gallery .item{
+          flex:0 0 50% ;
+          max-width: 50%;
+          position: relative;
+          padding:8px ;
+      }
+      .message-text .text{
+          flex: 0 0 100%;
+          max-width: 100%;
+      }
+      .message-text .button{
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left;
+        padding-top:40px 20px;
+      }
+      .contact-us .contact-form{
+          padding: 20px;
+      }
+      .contact-us .contact-form .col-6{
+          flex:0 0 100% ;
+          max-width:100% ;
+      }
+     }
+    
+    
+    
+    
+     @media(max-width:500px){
+        .Home .Home-content .block h1{
+            font-size: 30px;
+    }
+    .Home .Home-content .block h3{
+        font-size: 20px;
+    }
+    .Home .Home-content .block{
+        padding-left: 20px;
+    }
+    .portfolio .portfolio-gallery .item{
+        flex:0 0 100% ;
+        max-width: 100%; 
+    }
+    .about-me .about-content .text .info .list p{
+      
+        flex:0 0 100% ;
+    }
+    }
