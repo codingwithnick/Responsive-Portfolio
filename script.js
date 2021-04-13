@@ -25,7 +25,9 @@ for (let i = 0; i < filterButtons.length; i++) {
 }
 
 
-// light box
+
+
+// lightbox
 
 const closeLightbox = document.querySelector(".close-lightbox");
 const lightbox = document.querySelector(".lightbox");
@@ -36,10 +38,10 @@ lightbox.addEventListener("click", function () {
         lightbox.classList.remove("show");
         lightbox.classList.add("hide");
     }
+
 })
 
-
-closeLightbox.addEventListener("click", function() {
+closeLightbox.addEventListener("click", function () {
     lightbox.classList.remove("show");
     lightbox.classList.add("hide");
 })
@@ -47,7 +49,8 @@ closeLightbox.addEventListener("click", function() {
 const gallery = document.querySelector(".portfolio-gallery");
 const galleryItem = gallery.querySelectorAll(".item");
 
-galleryItem.forEach(function  (element) {
+
+galleryItem.forEach(function (element) {
     element.querySelector(".fa-plus").addEventListener("click", function () {
         lightbox.classList.remove("hide");
         lightbox.classList.add("show");
@@ -55,17 +58,47 @@ galleryItem.forEach(function  (element) {
     })
 })
 
+
+
 // header fix
 
 window.onscroll = function () {
     const docScrollTop = document.documentElement.scrollTop;
 
-    if (window.innerWidth > 991){
-        if(docScrollTop > 100) {
+    if (window.innerWidth > 991) {
+        if (docScrollTop > 100) {
             document.querySelector("header").classList.add("fixed")
         }
-        else{
+        else {
             document.querySelector("header").classList.remove("fixed")
         }
     }
 }
+
+
+
+// Navbar links
+
+const navbar = document.querySelector(".navbar");
+        a = navbar.querySelectorAll("a");
+
+        a.forEach(function(element){
+            element.addEventListener("click",function(){
+                 for(let i=0; i<a.length; i++){
+                    a[i].classList.remove("active");
+                 }
+                 this.classList.add("active")
+                 document.querySelector(".navbar").classList.toggle("show");
+            })
+        })
+
+
+    // ham-burger
+
+    const hamBurger=document.querySelector(".ham-burger");
+
+    hamBurger.addEventListener("click",function(){
+        document.querySelector(".navbar").classList.toggle("show");
+    })
+
+
